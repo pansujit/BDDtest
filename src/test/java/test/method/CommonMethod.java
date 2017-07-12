@@ -1,7 +1,11 @@
 package test.method;
 
+import java.util.Set;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.ContextAware;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -61,13 +65,18 @@ public class CommonMethod {
 		waitForPresence(LocatorsInMobile.outputTargetField,10);
 		System.out.println(getText(LocatorsInMobile.outputTargetField));
 		myUtility.clickWebElement(driver, LocatorsInMobile.favouriteMenuInHeyParis);
+		
+		Set<String> availableContexts1 = driver.getContextHandles();
+		System.out.println("Total No of Context Found Before reaching WebView = "+ availableContexts1.size());
+		System.out.println("Context Name is "+ availableContexts1);
+		
 		myUtility.clickWebElement(driver,LocatorsInMobile.targetMenu);
 		waitForPresence(LocatorsInMobile.learnMore,10);
 		myUtility.clickWebElement(driver,LocatorsInMobile.learnMore);
 		waitForPresence( LocatorsInMobile.CheckDictionaryInHeyParis,10);
 		System.out.println(myUtility.checkIfElementExist(driver, LocatorsInMobile.CheckDictionaryInHeyParis));
-		
-		waitTime();
+		myUtility.assertIgnoreCaseText(myUtility.getText(driver, LocatorsInMobile.AssertHeaderHeyParis),"Hey Paris");
+		/*waitTime();
 		System.out.println("hi" +myUtility.checkIfElementExist(driver, LocatorsInMobile.helloExpandIconInNounInHeyParis));
 		myUtility.clickWebElement(driver,LocatorsInMobile.helloExpandIconInNounInHeyParis);
 		System.out.println(getText(LocatorsInMobile.sourceWord));
@@ -75,6 +84,6 @@ public class CommonMethod {
 		waitTime();
 		System.out.println("hello" +myUtility.checkIfElementExist(driver, LocatorsInMobile.helloExpandIconInIntjInHeyParis));
 		myUtility.clickWebElement(driver,LocatorsInMobile.helloExpandIconInIntjInHeyParis);
-		System.out.println(getText(LocatorsInMobile.sourceWord));
+		System.out.println(getText(LocatorsInMobile.sourceWord));*/
 	}
 }

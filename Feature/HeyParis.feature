@@ -22,9 +22,9 @@ Feature: Reqdy2Go Hey Paris
 Scenario: "Hey Paris"
 Given User should have apk installed
 	And launched the app
-When Click on the main menu on the left tip side
-	And Click on the "Hey Paris" menu
-	Then "Hey paris" should be displayed on the top
+	When Click on the main menu on the left tip side
+	And Click on the 'Hey Paris' menu
+	Then 'Hey paris' should be displayed on the top
 When User tapped on the source input field
 	And type the text 'hello' and send enter key.
 	Then In the target field 'bonjour' should be displayed
@@ -32,11 +32,11 @@ When User tapped on the source input field
 	Then the Icon should be changed 'light green'
 	When click on the Expand Icon
 	Then 'learn more' text page should be appear
-	When Click on the "learn more page"
+	When Click on the 'learn more page'
 	Then Translator page should be displayed
 	Then dictionary item should be displayed
-	When Click on the hello(noun) expand button
-	Then pl:hello should be displayed
-	When Click on the hello(intj) expand button
-	Then "bonjour" should be displayed.
+	When Click on the 'hello(noun)' expand button
+	Then 'pl:hello' should be displayed
+	When Click on the 'hello(intj)' expand button
+	Then 'bonjour' should be displayed.
 

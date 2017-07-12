@@ -14,8 +14,10 @@ public class LocatorsInMobile {
 	public static String helloExpandIconInIntjInHeyParis="//*[@id='expand_icon' and ./preceding-sibling::*[@text='intj']]";
 	public static String sourceWord="//*[@id='lemma']";
 	public static String favouriteMenuInHeyParis="//*[@id='favorite_trad']";
+	public static String AssertHeaderHeyParis="//*[@text='Hey Paris']";
 	/*public static String name="//*[@text='Learn More']";
-	
+	Hey Paris
+
 	public static String name="//*[@class='android.widget.LinearLayout' and ./*[@text='Dictionnary']]";
 	public static String name="//*[@contentDescription='Open navigation drawer']";
 	public static String name="//*[@id='inspirationCardView' and ./*[./*[@text='TRIO TRICORD']]]";

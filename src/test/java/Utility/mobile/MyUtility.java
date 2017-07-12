@@ -1,8 +1,11 @@
 package Utility.mobile;
 
+
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +14,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import amazon.StartApplication;
 import io.appium.java_client.AppiumDriver;
@@ -91,6 +95,20 @@ public class MyUtility {
 			return test;
 		}
 		
+	}
+	
+	public boolean assertIgnoreCaseText(String text1,String text2){
+		return text1.equalsIgnoreCase(text2);
+	}
+	public boolean assertText(String text1,String text2){
+		return text1.equals(text2);
+	}
+	public boolean assertContainText(String text1,String text2){
+		return text1.contains(text2);
+	}
+	
+	public void getColorOfTheText( AndroidDriver drive, String path ){
+		System.out.println(createXpath(drive, path).getCssValue("color"));
 	}
 
 }
